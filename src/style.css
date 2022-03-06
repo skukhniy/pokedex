@@ -1,0 +1,52 @@
+html {
+  background-color: rgb(96, 120, 255);
+}
+body{
+  margin: 0;
+}
+#header{
+  background-color: rgb(25, 25, 206);
+  width:100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+#header img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+#pokemon-cards{
+  margin-top: 20px;
+  margin-right:20px;
+  margin-left:20px;
+  display: flex;
+  justify-content: space-around;
+}
+.pokemon-card{
+  display: inline-block;
+  width: 200px;
+  height:275px;
+  background-color: white;
+  border: 2px solid black;
+}
+.pokemon-card img{
+  max-height:100%;
+  max-width:100%;
+  pointer-events: none;
+}
+.pokemon-card p{
+  text-align: center;
+  margin-top: 0;
+  margin-bottom:0;
+  pointer-events: none;
+}
+.pokemon-card h3{
+  text-align: center;
+  pointer-events: none;
+}
+#pokemon-cards :hover{
+  cursor: pointer;
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(3);
+  transform: scale(1.2);
+}
