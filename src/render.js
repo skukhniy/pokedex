@@ -13,6 +13,7 @@ function tagFormat(id) {
 }
 
 function createCard(id) {
+  // grab json data file from pokemon API, then use that data to grab images/names/ids
   getPkmnData(id).then((data) => {
     // create card div
     const card = document.createElement('div');
@@ -39,6 +40,7 @@ function createCard(id) {
 }
 
 function renderCards() {
+  // loop to render all 151 pokemon
   for (let i = 1; i < 152; i += 1) {
     createCard(i);
   }

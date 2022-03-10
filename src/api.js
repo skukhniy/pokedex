@@ -1,4 +1,6 @@
 /* eslint-disable no-console */
+
+// async function to grab json data from the pokemon api 
 async function getPkmnData(id) {
   try {
     const url = `https://pokeapi.co/api/v2/pokemon/${id}`;
