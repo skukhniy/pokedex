@@ -51,3 +51,41 @@ body{
   -ms-transform: scale(3);
   transform: scale(1.2);
 }
+
+.modal {
+  display: inline-block;
+  position:fixed;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  z-index: 10;
+  background-color: white;
+  height:calc(189px * 2.75);
+  width:calc(255px * 2.75);
+  max-width: 80%;
+}
+
+#pokedex_template {
+  height:100%;
+  width:100%;
+}
+
+#pkmn_sprite_front {
+  
+}
+
+#overlay{
+  position:fixed;
+  /* opacity:0; */
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  background-color: rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+}
+
+#overlay.active {
+  pointer-events: all;
+  opacity: 1;
+}
