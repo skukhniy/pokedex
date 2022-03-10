@@ -6,16 +6,11 @@ async function getPkmnData(id) {
     const response = await fetch(url);
     // wait for the response to be converted to json
     const data = await response.json();
-    return data
-    // grab data
-    //console.log(data.sprites.front_default);
-    //console.log(data);
+    return data;
   } catch (err) {
     console.log(err);
   }
-}
-function pkmnData(id) {
-  return getPkmnData(id).then((res) => { return res });
+  return null;
 }
 
-export default pkmnData;
+export default getPkmnData;
