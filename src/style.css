@@ -47,28 +47,11 @@ body{
   text-align: center;
   pointer-events: none;
 }
-#pokemon-cards.active :hover{
+#pokemon-cards :hover{
   cursor: pointer;
   -webkit-transform: scale(1.2);
   -ms-transform: scale(3);
   transform: scale(1.2);
-}
-
-#overlay{
-  position:fixed;
-  opacity:0;
-  top:0;
-  left:0;
-  right:0;
-  bottom:0;
-  background-color: rgba(0, 0, 0, 0.5);
-  pointer-events: none;
-  transition: 200ms ease-in-out;
-}
-
-#overlay.active {
-  pointer-events: all;
-  opacity: 1;
 }
 
 .modal {
@@ -76,17 +59,12 @@ body{
   position:fixed;
   top:50%;
   left:50%;
-  transform: translate(-50%,-50%) scale(0);
-  transition: 200ms ease-in-out;
+  transform: translate(-50%,-50%);
   z-index: 1;
   background-color: white;
   height:calc(189px * 2.75);
   width:calc(255px * 2.75);
   max-width: 80%;
-}
-
-.modal.active {
-  transform: translate(-50%, -50%) scale(1);
 }
 
 #pokedex_template {
@@ -157,14 +135,10 @@ body{
   font-family: Pokemon;
   font-size: x-large;
   color: white;
-  text-shadow: -1px 1px 1px #000,
-  1px 1px 1px #000,
- 1px -1px 1px #000,
--1px -1px 1px #000,
--2px 2px 1px #000,
-  2px 2px 1px #000,
- 2px -2px 1px #000,
--2px -2px 1px #000;
+  text-shadow: -2px 2px 0 #000,
+  2px 2px 0 #000,
+ 2px -2px 0 #000,
+-2px -2px 0 #000;
   top:8.5%;
   left:50%;
   z-index: 5;
@@ -175,7 +149,7 @@ body{
   font-family: Pokemon;
   font-size: x-large;
   top:42.5%;
-  left:78%;
+  left:75%;
   z-index: 5;
 }
 
@@ -193,7 +167,7 @@ body{
   position: absolute;
   font-family: Pokemon;
   font-size: x-large;
-  top:67.25%;
+  top:68%;
   left:10%;
   margin-right: 35px;
   z-index: 5;
@@ -253,7 +227,7 @@ line-height: 42px;
 .fight{
   background-color: red;
 }
-.poison{
+.posion{
   background-color: purple;
 }
 .ground{
@@ -283,3 +257,68 @@ line-height: 42px;
 .steel{
   background-color: lightgray;
 }
+
+#overlay{
+  position:fixed;
+  /* opacity:0; */
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  background-color: rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+}
+
+#overlay.active {
+  pointer-events: all;
+  opacity: 1;
+}
+
+
+
+/* .pokemon-card {
+  position: relative;
+  background-color: white;
+  top: 0;
+  left: 0;
+  height:400px;
+  border-radius: 10%;
+}
+#charmander{
+  background-color: white;
+}
+.overlay {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 400px;
+  width:300px;
+  z-index: 1;
+}
+.pokemon_img {
+  display: inline-block;
+  position: absolute;
+  top: 40px;
+  left: 75px;
+  height:150px;
+  width:150px;
+  z-index: 2;
+}
+
+.pokemon_id{
+  display: inline-block;
+  position: absolute;
+  top:195px;
+  left:130px;
+  z-index: 3;
+  color: black;
+}
+.pokemon_name{
+  display: inline-block;
+  position: absolute;
+  margin:0;
+  top:15px;
+  left:60px;
+  z-index: 3;
+  color: black;
+} */
