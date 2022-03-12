@@ -110,10 +110,10 @@ body{
 .pkmn_sprite_back {
   display: inline-block;
   position: absolute;
-  height: calc(96px);
-  width: calc(96px);
-  top: 33%;
-  left:43%;
+  height: 90px;
+  width: 90px;
+  top: 33.5%;
+  left:41%;
   z-index: 3;
 }
 
@@ -157,10 +157,14 @@ body{
   font-family: Pokemon;
   font-size: x-large;
   color: white;
-  text-shadow: -2px 2px 0 #000,
-  2px 2px 0 #000,
- 2px -2px 0 #000,
--2px -2px 0 #000;
+  text-shadow: -1px 1px 1px #000,
+  1px 1px 1px #000,
+ 1px -1px 1px #000,
+-1px -1px 1px #000,
+-2px 2px 1px #000,
+  2px 2px 1px #000,
+ 2px -2px 1px #000,
+-2px -2px 1px #000;
   top:8.5%;
   left:50%;
   z-index: 5;
@@ -171,7 +175,7 @@ body{
   font-family: Pokemon;
   font-size: x-large;
   top:42.5%;
-  left:75%;
+  left:78%;
   z-index: 5;
 }
 
@@ -189,7 +193,7 @@ body{
   position: absolute;
   font-family: Pokemon;
   font-size: x-large;
-  top:68%;
+  top:67.25%;
   left:10%;
   margin-right: 35px;
   z-index: 5;
