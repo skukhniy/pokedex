@@ -1,3 +1,5 @@
+@font-face { font-family: Pokemon; src: url('pokemon-font.ttf'); } ji
+
 html {
   background-color: rgb(96, 120, 255);
 }
@@ -65,14 +67,7 @@ body{
   max-width: 80%;
 }
 
-#template_container{
-  position: relative;
-  height: 100%;
-  width: 100%;
-}
-
 #pokedex_template {
-  position: absolute;
   height:100%;
   width:100%;
   top: 0;
@@ -80,12 +75,102 @@ body{
   z-index: 2;
 }
 
-#pkmn_sprite_front {
+.pkmn_sprite_front {
   display: inline-block;
   position: absolute;
-  top: 50%;
+  height: calc(96px*3);
+  width: calc(96px*3);
+  top: 10%;
+  left:0;
+  z-index: 3;
+}
+
+.pkmn_sprite_back {
+  display: inline-block;
+  position: absolute;
+  height: calc(96px*2);
+  width: calc(96px*2);
+  top: 23%;
+  left:33%;
+  z-index: 3;
+}
+
+.pkdx_name {
+  display: inline-block;
+  position: absolute;
+  font-family: Pokemon;
+  font-size: x-large;
+  color: white;
+  text-shadow: -2px 2px 0px #000,
+  2px 2px 0px #000,
+ 2px -2px 0px #000,
+-2px -2px 0px #000;
+  top:8.5%;
+  left:60%;
+  z-index: 4;
+}
+
+.pkdx_nickname {
+  display: inline-block;
+  position: absolute;
+  font-family: Pokemon;
+  font-size: x-large;
+  color: white;
+  text-shadow: -1px 1px 1px #000,
+  1px 1px 1px #000,
+ 1px -1px 1px #000,
+-1px -1px 1px #000,
+-2px 2px 1px #000,
+  2px 2px 1px #000,
+ 2px -2px 1px #000,
+-2px -2px 1px #000;
+  top:17%;
   left:50%;
-  z-index: 6;
+  z-index: 4;
+}
+
+.pkdx_id {
+  display: inline-block;
+  position: absolute;
+  font-family: Pokemon;
+  font-size: x-large;
+  color: white;
+  text-shadow: -2px 2px 0 #000,
+  2px 2px 0 #000,
+ 2px -2px 0 #000,
+-2px -2px 0 #000;
+  top:8.5%;
+  left:50%;
+  z-index: 5;
+}
+
+.pkdx_ht{  display: inline-block;
+  position: absolute;
+  font-family: Pokemon;
+  font-size: x-large;
+  top:42.5%;
+  left:75%;
+  z-index: 5;
+}
+
+.pkdx_wt{  display: inline-block;
+  position: absolute;
+  font-family: Pokemon;
+  font-size: x-large;
+  top:51.5%;
+  left:75%;
+  z-index: 5;
+}
+
+.pkdx_description{ 
+  display: inline-block;
+  position: absolute;
+  font-family: Pokemon;
+  font-size: x-large;
+  top:68%;
+  left:10%;
+  margin-right: 35px;
+  z-index: 5;
 }
 
 #overlay{
@@ -103,6 +188,9 @@ body{
   pointer-events: all;
   opacity: 1;
 }
+
+
+
 /* .pokemon-card {
   position: relative;
   background-color: white;
