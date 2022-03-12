@@ -105,6 +105,14 @@ function createModalHTML(data, speciesData) {
   description.innerHTML = speciesData.flavor_text_entries[9].flavor_text;
   description.className = "pkdx_description temp";
 
+  const type1 = document.createElement('p');
+  type1.innerHTML = capitalize(data.types[0].type.name);
+  type1.className = `type ${data.types[0].type.name} left`;
+  
+  const type2 = document.createElement('p');
+  type2.innerHTML = capitalize(data.types[1].type.name);
+  type2.className = `type ${data.types[1].type.name} right`;
+
   displayController.modal.appendChild(spriteFront);
   displayController.modal.appendChild(spriteBack);
   displayController.modal.appendChild(name);
@@ -113,6 +121,8 @@ function createModalHTML(data, speciesData) {
   displayController.modal.appendChild(ht);
   displayController.modal.appendChild(wt);
   displayController.modal.appendChild(description);
+  displayController.modal.appendChild(type1);
+  displayController.modal.appendChild(type2);
 }
 
 function createCardDOM(card, data, speciesData) {
@@ -126,8 +136,8 @@ function createCardDOM(card, data, speciesData) {
 async function createCard(id) {
   const data = await getPkmnData(id);
   const speciesData = await getPkmnData(id, '-species');
-  console.log(data);
-  console.log(speciesData);
+  // console.log(data);
+  // console.log(speciesData);
   const newCard = createCardHTML(data);
   createCardDOM(newCard, data, speciesData);
 }

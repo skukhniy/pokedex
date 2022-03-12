@@ -199,4 +199,87 @@ body{
   z-index: 5;
 }
 
+.type{
+  display: inline-block;
+  position: absolute;
+  font-family: Pokemon;
+  font-size: x-large;
+  color: white;
+  text-shadow: -1px 1px 1px #000,
+  1px 1px 1px #000,
+ 1px -1px 1px #000,
+-1px -1px 1px #000,
+-2px 2px 1px #000,
+  2px 2px 1px #000,
+ 2px -2px 1px #000,
+-2px -2px 1px #000;
+background-color: green;
+width:127px;
+height:42px;
+border-radius: 6%;
+border: 2.2px solid black;
+text-align: center;
+vertical-align: middle;
+line-height: 42px;
+}
+.left{
+  top:28.5%;
+  left:56%;
+}
 
+.right{
+  top:28.5%;
+  left: 76%;
+}
+
+.normal{
+  background-color: brown;
+}
+.fire{
+  background-color: red;
+}
+.water{
+  background-color: blue;
+}
+.electr{
+  background-color: yellow;
+}
+.grass{
+  background-color: rgb(29, 185, 29);
+}
+.ice{
+  background-color: lightblue;
+}
+.fight{
+  background-color: red;
+}
+.poison{
+  background-color: purple;
+}
+.ground{
+  background-color: brown;
+}
+.flying{
+  background-color: lightblue;
+}
+.psychic{
+  background-color: pink;
+}
+.bug{
+  background-color: lightgreen;
+}
+.rock{
+  background-color: brown;
+}
+.ghost{
+  background-color: purple;
+}
+.dragon{
+  background-color: purple;
+}
+.dark{
+  background-color: gray;
+}
+.steel{
+  background-color: lightgray;
+}
