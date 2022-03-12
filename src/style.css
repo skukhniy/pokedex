@@ -47,7 +47,7 @@ body{
   text-align: center;
   pointer-events: none;
 }
-#pokemon-cards :hover{
+#pokemon-cards.active :hover{
   cursor: pointer;
   -webkit-transform: scale(1.2);
   -ms-transform: scale(3);
@@ -110,10 +110,10 @@ body{
 .pkmn_sprite_back {
   display: inline-block;
   position: absolute;
-  height: calc(96px*2);
-  width: calc(96px*2);
-  top: 23%;
-  left:33%;
+  height: calc(96px);
+  width: calc(96px);
+  top: 33%;
+  left:43%;
   z-index: 3;
 }
 
