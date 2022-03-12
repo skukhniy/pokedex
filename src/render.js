@@ -108,10 +108,15 @@ function createModalHTML(data, speciesData) {
   const type1 = document.createElement('p');
   type1.innerHTML = capitalize(data.types[0].type.name);
   type1.className = `type ${data.types[0].type.name} left temp`;
-  
+
   const type2 = document.createElement('p');
-  type2.innerHTML = capitalize(data.types[1].type.name);
-  type2.className = `type ${data.types[1].type.name} right temp`;
+  try{
+    type2.innerHTML = capitalize(data.types[1].type.name);
+    type2.className = `type ${data.types[1].type.name} right temp`;
+  } catch(error) {
+    console.error(error);
+    console.log(error);
+  }
 
   displayController.modal.appendChild(spriteFront);
   displayController.modal.appendChild(spriteBack);

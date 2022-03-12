@@ -193,7 +193,7 @@ body{
   position: absolute;
   font-family: Pokemon;
   font-size: x-large;
-  top:67.25%;
+  top:67%;
   left:10%;
   margin-right: 35px;
   z-index: 5;
@@ -224,12 +224,12 @@ line-height: 42px;
 }
 .left{
   top:28.5%;
-  left:56%;
+  left:57%;
 }
 
 .right{
   top:28.5%;
-  left: 76%;
+  left: 76.2%;
 }
 
 .normal{
@@ -250,10 +250,10 @@ line-height: 42px;
 .ice{
   background-color: lightblue;
 }
-.fight{
+.fighting{
   background-color: red;
 }
-.posion{
+.poison{
   background-color: purple;
 }
 .ground{
