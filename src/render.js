@@ -1,5 +1,6 @@
 import displayController from "./controller";
 import getPkmnData from "./api";
+import { openModal } from "./modal-popout";
 
 // function to format the ID with a tag ex: 5 -> "#005"
 function tagFormat(id) {
@@ -43,6 +44,7 @@ function createCardDOM(card) {
   const selector = document.getElementById(card.id);
   selector.addEventListener("click", () => {
     console.log(selector);
+    openModal(displayController.modal);
   });
 }
 

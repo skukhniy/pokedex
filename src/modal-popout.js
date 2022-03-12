@@ -27,3 +27,5 @@ overlay.addEventListener('click', () => {
     closeModal(modal);
   });
 });
+
+export { openModal, closeModal };
