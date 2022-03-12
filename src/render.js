@@ -12,35 +12,50 @@ function tagFormat(id) {
   return (`#${string}`);
 }
 
-function createCard(id) {
-  getPkmnData(id).then((data) => {
-    // create card div
-    const card = document.createElement('div');
-    card.className = "pokemon-card";
+function createCardHTML(data) {
+  // create card div
+  const card = document.createElement('div');
+  card.className = "pokemon-card";
+  card.id = data.id;
 
-    // create elements inside the card div
-    const img = document.createElement('img');
-    img.src = data.sprites.other["official-artwork"].front_default;
+  // create elements inside the card div
+  const img = document.createElement('img');
+  img.src = data.sprites.other["official-artwork"].front_default;
 
-    const idTag = document.createElement('p');
-    idTag.innerHTML = tagFormat(data.id);
+  const idTag = document.createElement('p');
+  idTag.innerHTML = tagFormat(data.id);
 
-    const pkmnName = document.createElement('h3');
-    // capitalizes the name of the pokemon
-    const pkmnString = (String(data.name)).charAt(0).toUpperCase() + (String(data.name)).slice(1);
-    pkmnName.innerHTML = pkmnString;
+  const pkmnName = document.createElement('h3');
+  // capitalizes the name of the pokemon
+  const pkmnString = (String(data.name)).charAt(0).toUpperCase() + (String(data.name)).slice(1);
+  pkmnName.innerHTML = pkmnString;
 
-    // append children
-    card.appendChild(img);
-    card.appendChild(idTag);
-    card.appendChild(pkmnName);
-    displayController.cardContainer.appendChild(card);
+  // append children
+  card.appendChild(img);
+  card.appendChild(idTag);
+  card.appendChild(pkmnName);
+  displayController.cardContainer.appendChild(card);
+  return (card);
+}
+
+function createCardDOM(card) {
+  console.log(card.id);
+  const selector = document.getElementById(card.id);
+  selector.addEventListener("click", () => {
+    console.log(selector);
   });
 }
 
-function renderCards() {
-  for (let i = 1; i < 152; i += 1) {
-    createCard(i);
+async function createCard(id) {
+  const data = await getPkmnData(id);
+  const newCard = createCardHTML(data);
+  createCardDOM(newCard);
+}
+
+// use 152 for kanto
+async function renderCards() {
+  for (let i = 1; i < 4; i += 1) {
+    await createCard(i);
   }
 }
 export { createCard, renderCards };
