@@ -96,6 +96,8 @@ body{
 }
 
 .pkdx_name {
+<<<<<<< HEAD
+=======
   display: inline-block;
   position: absolute;
   font-family: Pokemon;
@@ -130,11 +132,49 @@ body{
 }
 
 .pkdx_id {
+>>>>>>> modal-concept
   display: inline-block;
   position: absolute;
   font-family: Pokemon;
   font-size: x-large;
   color: white;
+<<<<<<< HEAD
+  text-shadow: -2px 2px 0px #000,
+  2px 2px 0px #000,
+ 2px -2px 0px #000,
+-2px -2px 0px #000;
+  top:8.5%;
+  left:60%;
+  z-index: 4;
+}
+
+.pkdx_nickname {
+  display: inline-block;
+  position: absolute;
+  font-family: Pokemon;
+  font-size: x-large;
+  color: white;
+  text-shadow: -1px 1px 1px #000,
+  1px 1px 1px #000,
+ 1px -1px 1px #000,
+-1px -1px 1px #000,
+-2px 2px 1px #000,
+  2px 2px 1px #000,
+ 2px -2px 1px #000,
+-2px -2px 1px #000;
+  top:17%;
+  left:50%;
+  z-index: 4;
+}
+
+.pkdx_id {
+  display: inline-block;
+  position: absolute;
+  font-family: Pokemon;
+  font-size: x-large;
+  color: white;
+=======
+>>>>>>> modal-concept
   text-shadow: -2px 2px 0 #000,
   2px 2px 0 #000,
  2px -2px 0 #000,
@@ -187,4 +227,57 @@ body{
 #overlay.active {
   pointer-events: all;
   opacity: 1;
+<<<<<<< HEAD
 }
+=======
+}
+
+
+
+/* .pokemon-card {
+  position: relative;
+  background-color: white;
+  top: 0;
+  left: 0;
+  height:400px;
+  border-radius: 10%;
+}
+#charmander{
+  background-color: white;
+}
+.overlay {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 400px;
+  width:300px;
+  z-index: 1;
+}
+.pokemon_img {
+  display: inline-block;
+  position: absolute;
+  top: 40px;
+  left: 75px;
+  height:150px;
+  width:150px;
+  z-index: 2;
+}
+
+.pokemon_id{
+  display: inline-block;
+  position: absolute;
+  top:195px;
+  left:130px;
+  z-index: 3;
+  color: black;
+}
+.pokemon_name{
+  display: inline-block;
+  position: absolute;
+  margin:0;
+  top:15px;
+  left:60px;
+  z-index: 3;
+  color: black;
+} */
+>>>>>>> modal-concept
