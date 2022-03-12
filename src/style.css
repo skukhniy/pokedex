@@ -47,11 +47,28 @@ body{
   text-align: center;
   pointer-events: none;
 }
-#pokemon-cards :hover{
+#pokemon-cards.active :hover{
   cursor: pointer;
   -webkit-transform: scale(1.2);
   -ms-transform: scale(3);
   transform: scale(1.2);
+}
+
+#overlay{
+  position:fixed;
+  opacity:0;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  background-color: rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+  transition: 200ms ease-in-out;
+}
+
+#overlay.active {
+  pointer-events: all;
+  opacity: 1;
 }
 
 .modal {
@@ -59,12 +76,17 @@ body{
   position:fixed;
   top:50%;
   left:50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%) scale(0);
+  transition: 200ms ease-in-out;
   z-index: 1;
   background-color: white;
   height:calc(189px * 2.75);
   width:calc(255px * 2.75);
   max-width: 80%;
+}
+
+.modal.active {
+  transform: translate(-50%, -50%) scale(1);
 }
 
 #pokedex_template {
@@ -135,10 +157,14 @@ body{
   font-family: Pokemon;
   font-size: x-large;
   color: white;
-  text-shadow: -2px 2px 0 #000,
-  2px 2px 0 #000,
- 2px -2px 0 #000,
--2px -2px 0 #000;
+  text-shadow: -1px 1px 1px #000,
+  1px 1px 1px #000,
+ 1px -1px 1px #000,
+-1px -1px 1px #000,
+-2px 2px 1px #000,
+  2px 2px 1px #000,
+ 2px -2px 1px #000,
+-2px -2px 1px #000;
   top:8.5%;
   left:50%;
   z-index: 5;
@@ -149,7 +175,7 @@ body{
   font-family: Pokemon;
   font-size: x-large;
   top:42.5%;
-  left:75%;
+  left:78%;
   z-index: 5;
 }
 
@@ -167,7 +193,7 @@ body{
   position: absolute;
   font-family: Pokemon;
   font-size: x-large;
-  top:68%;
+  top:67.25%;
   left:10%;
   margin-right: 35px;
   z-index: 5;
@@ -257,24 +283,6 @@ line-height: 42px;
 .steel{
   background-color: lightgray;
 }
-
-#overlay{
-  position:fixed;
-  /* opacity:0; */
-  top:0;
-  left:0;
-  right:0;
-  bottom:0;
-  background-color: rgba(0, 0, 0, 0.5);
-  pointer-events: none;
-}
-
-#overlay.active {
-  pointer-events: all;
-  opacity: 1;
-}
-
-
 
 /* .pokemon-card {
   position: relative;
