@@ -43,7 +43,6 @@ function createCardDOM(card) {
   console.log(card.id);
   const selector = document.getElementById(card.id);
   selector.addEventListener("click", () => {
-    console.log(selector);
     openModal(displayController.modal);
   });
 }
