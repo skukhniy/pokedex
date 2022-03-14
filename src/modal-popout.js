@@ -15,7 +15,7 @@ function closeModal(modal) {
   modal.classList.remove('active');
   overlay.classList.remove('active');
   displayController.cardContainer.classList.add('active');
-  const tempElements = document.querySelectorAll('.temp')
+  const tempElements = document.querySelectorAll('.temp');
 
   tempElements.forEach(elem => {
     elem.remove();

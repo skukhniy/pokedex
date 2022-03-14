@@ -112,7 +112,7 @@ body{
   position: absolute;
   height: 90px;
   width: 90px;
-  top: 33.5%;
+  top: 34%;
   left:41%;
   z-index: 3;
 }
@@ -194,7 +194,7 @@ body{
   font-family: Pokemon;
   font-size: x-large;
   top:67%;
-  left:10%;
+  left:9.5%;
   margin-right: 35px;
   z-index: 5;
 }
@@ -233,7 +233,7 @@ line-height: 42px;
 }
 
 .normal{
-  background-color: brown;
+  background-color: rgb(151, 134, 134);
 }
 .fire{
   background-color: red;
@@ -241,8 +241,8 @@ line-height: 42px;
 .water{
   background-color: blue;
 }
-.electr{
-  background-color: yellow;
+.electric{
+  background-color: rgb(247, 202, 2);
 }
 .grass{
   background-color: rgb(29, 185, 29);
@@ -263,7 +263,7 @@ line-height: 42px;
   background-color: lightblue;
 }
 .psychic{
-  background-color: pink;
+  background-color: rgb(240, 106, 128);
 }
 .bug{
   background-color: lightgreen;
@@ -275,13 +275,16 @@ line-height: 42px;
   background-color: purple;
 }
 .dragon{
-  background-color: purple;
+  background-color: rgb(138, 4, 98);
 }
 .dark{
   background-color: gray;
 }
 .steel{
   background-color: lightgray;
+}
+.fairy{
+  background-color: pink;
 }
 
 /* .pokemon-card {
