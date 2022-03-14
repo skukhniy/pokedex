@@ -1,11 +1,4 @@
-/* eslint-disable no-console */
-<<<<<<< HEAD
-
-// async function to grab json data from the pokemon api 
-async function getPkmnData(id) {
-=======
 async function getPkmnData(id, species = '') {
->>>>>>> modal-popout
   try {
     const url = `https://pokeapi.co/api/v2/pokemon${species}/${id}`;
     // wait until we fetch the url response

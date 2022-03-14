@@ -26,14 +26,6 @@ function tagFormat(id, tag = true) {
   return (`#${string}`);
 }
 
-<<<<<<< HEAD
-function createCard(id) {
-  // grab json data file from pokemon API, then use that data to grab images/names/ids
-  getPkmnData(id).then((data) => {
-    // create card div
-    const card = document.createElement('div');
-    card.className = "pokemon-card";
-=======
 function hexConversion(hectogram) {
   const pound = 0.220462;
   const conversion = Math.round((hectogram * pound) * 10) / 10;
@@ -104,7 +96,6 @@ function createModalHTML(data, speciesData) {
   const ht = document.createElement('p');
   ht.innerHTML = dexConversion(data.height);
   ht.className = "pkdx_ht temp";
->>>>>>> modal-popout
 
   const wt = document.createElement('p');
   wt.innerHTML = hexConversion(data.weight);
@@ -119,10 +110,10 @@ function createModalHTML(data, speciesData) {
   type1.className = `type ${data.types[0].type.name} left temp`;
 
   const type2 = document.createElement('p');
-  try{
+  try {
     type2.innerHTML = capitalize(data.types[1].type.name);
     type2.className = `type ${data.types[1].type.name} right temp`;
-  } catch(error) {
+  } catch (error) {
     console.error(error);
     console.log(error);
   }
@@ -147,10 +138,6 @@ function createCardDOM(card, data, speciesData) {
   });
 }
 
-<<<<<<< HEAD
-function renderCards() {
-  // loop to render all 151 pokemon
-=======
 async function createCard(id) {
   const data = await getPkmnData(id);
   const speciesData = await getPkmnData(id, '-species');
@@ -162,7 +149,6 @@ async function createCard(id) {
 
 // use 152 for kanto
 async function renderCards() {
->>>>>>> modal-popout
   for (let i = 1; i < 152; i += 1) {
     await createCard(i);
   }

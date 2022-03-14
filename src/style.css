@@ -251,13 +251,13 @@ line-height: 42px;
   background-color: lightblue;
 }
 .fighting{
-  background-color: red;
+  background-color: brown;
 }
 .poison{
   background-color: purple;
 }
 .ground{
-  background-color: brown;
+  background-color: rgb(177, 118, 9);
 }
 .flying{
   background-color: lightblue;
@@ -269,7 +269,7 @@ line-height: 42px;
   background-color: lightgreen;
 }
 .rock{
-  background-color: brown;
+  background-color: rgb(110, 62, 7);
 }
 .ghost{
   background-color: purple;
