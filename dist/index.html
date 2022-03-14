@@ -4,14 +4,32 @@
       <title>Pokedex</title>
     </head>
     <body>
-        <div id="header">
-          <header>
-            <img src="../src/imgs/pokedex_logo.png">
-          </header>
+      <div id="header">
+        <header>
+          <img id="pokedex_logo" src="../src/imgs/pokedex_logo.png">
+        </header>
+      <!-- <button data-modal-target="#modal" >Open Modal</button> -->
+
+      <div class="modal" id="modal">
+        <img id="pokedex_template" src="../src/imgs/pokedex_template.png">
+      </div>
+
+
         </div>
-        <div id="pokemon-cards">
+        <div id="pokemon-cards" class="active">
           </div>
+        <div id="overlay"></div>
         <script src="main.js"></script>
     </body>
+
 </html>
 
+<!-- <img id="pokedex_template" src="../src/imgs/pokedex_template.png">
+<img class="pkmn_sprite_front" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png">
+<img class="pkmn_sprite_back" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/1.png">
+<p class="pkdx_name">Bulbasaur</p>
+<p class="pkdx_nickname">Seed Pokemon</p>
+<p class="pkdx_id">001</p>
+<p class="pkdx_ht">2'04"</p>
+<p class="pkdx_wt">15.2 lbs.</p>
+<p class="pkdx_description">There is a plant seed on its back right from the day this POKéMON is born. The seed slowly grows larger.</p> -->
