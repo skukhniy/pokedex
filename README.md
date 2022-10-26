@@ -1,5 +1,7 @@
 # Pokedex
 
+![pokedex](https://www.stanislavkukhniy.com/static/media/pokedex-screenshot.f1437c0f.png)
+
 ### [Live Demo](https://skukhniy.github.io/pokedex/dist/index.html)
 
 #### 📝 Description
