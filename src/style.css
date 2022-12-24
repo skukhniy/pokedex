@@ -11,11 +11,15 @@ body{
   width:100%;
   padding-top: 10px;
   padding-bottom: 10px;
+  display: flex;
+  justify-content: center;
 }
 #header img{
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+  display: inline-block;
+}
+.pokeball {
+  height:90px;
+  width:90px;
 }
 #pokemon-cards{
   margin-top: 20px;

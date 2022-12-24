@@ -1,3 +1,4 @@
+// return json data objects from pokeapi
 async function getPkmnData(id, species = '') {
   try {
     const url = `https://pokeapi.co/api/v2/pokemon${species}/${id}`;

@@ -10,6 +10,7 @@ function capitalize(string) {
 // function to format the ID with a tag ex: 5 -> "#005"
 function tagFormat(id, tag = true) {
   const string = String(id);
+  // dont include # if not needed
   if (tag === false) {
     if (string.length === 1) {
       return (`00${string}`);
@@ -18,6 +19,7 @@ function tagFormat(id, tag = true) {
     }
     return (`${string}`);
   }
+  // include #
   if (string.length === 1) {
     return (`#00${string}`);
   } if (string.length === 2) {
@@ -26,11 +28,14 @@ function tagFormat(id, tag = true) {
   return (`#${string}`);
 }
 
+// convert hectograms to lbs and add correct string format
 function hexConversion(hectogram) {
   const pound = 0.220462;
   const conversion = Math.round((hectogram * pound) * 10) / 10;
   return `${String(conversion)} lbs.`;
 }
+
+// convert decimeters to foot'inch" format
 function dexConversion(decimeter) {
   const foot = 0.328084;
   const inch = 0.0833333;
@@ -46,6 +51,7 @@ function dexConversion(decimeter) {
   return `${String(feet)}'${inches}"`;
 }
 
+// creates HTML elements for new cards
 function createCardHTML(data) {
   // create card div
   const card = document.createElement('div');
@@ -71,6 +77,7 @@ function createCardHTML(data) {
   return (card);
 }
 
+// creates elements for Modal Popout window
 function createModalHTML(data, speciesData) {
   const spriteFront = document.createElement('img');
   spriteFront.src = data.sprites.front_default;
@@ -110,7 +117,7 @@ function createModalHTML(data, speciesData) {
   type1.className = `type ${data.types[0].type.name} left temp`;
 
   const type2 = document.createElement('p');
-  try {
+  try { // not all pokemon have two types, this will catch any errors
     type2.innerHTML = capitalize(data.types[1].type.name);
     type2.className = `type ${data.types[1].type.name} right temp`;
   } catch (error) {
@@ -130,6 +137,7 @@ function createModalHTML(data, speciesData) {
   displayController.modal.appendChild(type2);
 }
 
+// add event listeners to cards that will open and close the modal window.
 function createCardDOM(card, data, speciesData) {
   const selector = document.getElementById(card.id);
   selector.addEventListener("click", () => {
@@ -138,16 +146,15 @@ function createCardDOM(card, data, speciesData) {
   });
 }
 
+// create a new pokemon card
 async function createCard(id) {
   const data = await getPkmnData(id);
   const speciesData = await getPkmnData(id, '-species');
-  // console.log(data);
-  // console.log(speciesData);
   const newCard = createCardHTML(data);
   createCardDOM(newCard, data, speciesData);
 }
 
-// use 152 for kanto
+// adds cards based on number of pokemon.
 async function renderCards() {
   for (let i = 1; i < 152; i += 1) {
     await createCard(i);
