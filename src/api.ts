@@ -15,7 +15,6 @@ async function getPkmnData(id: number, species = '') {
     const response = await fetch(url);
     // wait for the response to be converted to json
     const data: responseData = await response.json();
-    console.log(typeof data);
     return data;
   } catch (err) {
     console.log(err);
