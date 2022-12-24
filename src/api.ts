@@ -1,5 +1,5 @@
 // return json data objects from pokeapi
-async function getPkmnData(id, species = '') {
+async function getPkmnData(id: number, species = '') {
   try {
     const url = `https://pokeapi.co/api/v2/pokemon${species}/${id}`;
     // wait until we fetch the url response
