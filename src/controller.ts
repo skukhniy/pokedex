@@ -1,10 +1,13 @@
 const displayController = (() => {
-  const cardContainer = document.getElementById("pokemon-cards");
-  const modal = document.getElementById("modal");
+  const cardContainer = document.getElementById('pokemon-cards');
+  const modal = document.getElementById('modal');
   const openModalButtons = document.querySelectorAll('[data-modal-target]');
   const overlay = document.getElementById('overlay');
   return {
-    cardContainer, modal, openModalButtons, overlay,
+    cardContainer,
+    modal,
+    openModalButtons,
+    overlay,
   };
 })();
 
